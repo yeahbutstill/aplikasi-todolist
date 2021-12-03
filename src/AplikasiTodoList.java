@@ -4,11 +4,10 @@ public class AplikasiTodoList {
 
   public static void main(String[] args) {
     testShowTodoList();
+    testAddTodoList();
   }
 
-  /**
-   * Menampilkan todo list
-   */
+  /** Menampilkan todo list */
   public static void showTodoList() {
     for (var i = 0; i < model.length; i++) {
       var todo = model[i];
@@ -20,9 +19,7 @@ public class AplikasiTodoList {
     }
   }
 
-  /**
-   * Test Menampilkan todo list
-   */
+  /** Test Menampilkan todo list */
   public static void testShowTodoList() {
     model[0] = "Pray";
     model[1] = "Read Book";
@@ -33,38 +30,54 @@ public class AplikasiTodoList {
     showTodoList();
   }
 
-  /**
-   * Menambahkan todo list 
-   */
-  public static void addTodoList() {
+  /** Menambahkan todo list */
+  public static void addTodoList(String todo) {
+    // Check apakah model penuh?
+    var isFull = true;
+    for (int i = 0; i < model.length; i++) {
+      if (model[i] == null) {
+        // kalau datanya masih ada yang kosong
+        isFull = false;
+        break;
+      }
+    }
 
+    // Jika penuh, rieze ukuran array 2x lipat
+    if (isFull) {
+      var temp = model;
+      model = new String[model.length * 2];
+
+      for (int i = 0; i < temp.length; i++) {
+        model[i] = temp[i];
+      }
+    }
+
+    // Tambahkan ke posisi yang data array nya Null
+    for (var i = 0; i < model.length; i++) {
+      if (model[i] == null) {
+        model[i] = todo;
+        break;
+      }
+    }
   }
 
-  /**
-   * Menghapus todo list
-   */
-  public static void removeTodoList() {
-    
+  /** Test menambahkan todo list */
+  public static void testAddTodoList() {
+    for (int i = 0; i < 25; i++) {
+      addTodoList("Sample Todo -" + i);
+    }
+    showTodoList();
   }
 
-  /**
-   * Menampilkan view todo list
-   */
-  public static void viewShowTodoList() {
+  /** Menghapus todo list */
+  public static void removeTodoList() {}
 
-  }
+  /** Menampilkan view todo list */
+  public static void viewShowTodoList() {}
 
-  /**
-   * Menampilkan view menambahkan todo list
-   */
-  public static void viewAddTodoList() {
+  /** Menampilkan view menambahkan todo list */
+  public static void viewAddTodoList() {}
 
-  }
-
-  /**
-   * Menampilkan view menghapus todo list
-   */
-  public static void viewRemoveTodoList() {
-    
-  }
+  /** Menampilkan view menghapus todo list */
+  public static void viewRemoveTodoList() {}
 }
