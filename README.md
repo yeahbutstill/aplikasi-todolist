@@ -13,3 +13,10 @@
 ## Membuat Model
 - Apa itu model? Model adalah data atau representasi dari datanya
 - Jadi kita akan tentukan datanya untuk aplikasi todolist
+             
+## Menentukan Businees Logic
+- Menampilkan todolist
+- Menambah todolist
+- Menghapus todolist
+
+## 
