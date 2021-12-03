@@ -40,6 +40,8 @@
 - Test Menambahkan TodoList
 - Menghapus TodoList
 - Test Menghapus TodoList
+- Menampilkan View TodoList
+- Test View TodoList
 
 ## Input Data
 
