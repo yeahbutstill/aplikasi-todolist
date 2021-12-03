@@ -6,7 +6,24 @@ public class AplikasiTodoList {
     //
   }
 
+  /**
+   * Menampilkan todo list
+   */
   public static void showTodoList() {
+
+  }
+
+  /**
+   * Menambahkan todo list 
+   */
+  public static void addTodoList() {
+
+  }
+
+  /**
+   * Menghapus todo list
+   */
+  public static void removeTodoList() {
     
   }
 }
