@@ -12,7 +12,8 @@ public class AplikasiTodoList {
     //    testInputData();
     //    testViewShowTodoList();
     //    testViewAddTodoList();
-    testViewRemoveTodoList();
+    //    testViewRemoveTodoList();
+    viewShowTodoList();
   }
 
   /** Menampilkan todo list */
