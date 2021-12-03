@@ -15,8 +15,16 @@
 - Jadi kita akan tentukan datanya untuk aplikasi todolist
              
 ## Menentukan Businees Logic
-- Menampilkan todolist
-- Menambah todolist
-- Menghapus todolist
+- Menampilkan TodoList
+- Menambah TodoList
+- Menghapus TodoList
 
-## 
+## Menentukan View
+- Tampilan itu menyesuaikan ada beberapa screen(view)
+- View TodoList
+- View Tambah TodoList
+- View Hapus TodoList
+
+## Implementasi Businees Logic
+- Menampilkan TodoList
+- Test Menampilkan TodoList
