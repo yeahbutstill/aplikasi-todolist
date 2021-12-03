@@ -10,7 +10,8 @@ public class AplikasiTodoList {
     //    testAddTodoList();
     //    testRemoveTodoList();
     //    testInputData();
-    testViewShowTodoList();
+    //    testViewShowTodoList();
+    testViewAddTodoList();
   }
 
   /** Menampilkan todo list */
@@ -163,7 +164,28 @@ public class AplikasiTodoList {
   }
 
   /** Menampilkan view menambahkan todo list */
-  public static void viewAddTodoList() {}
+  public static void viewAddTodoList() {
+    System.out.println("MENAMBAH TODOLIST");
+    var todo = input("Todo (x Jika Batal)");
+
+    if (todo.equals("x")) {
+      // batal
+    } else {
+      addTodoList(todo);
+    }
+  }
+
+  /**
+   * Test View Menambah TodoList
+   */
+  public static void testViewAddTodoList() {
+    addTodoList("Satu");
+    addTodoList("Dua");
+
+    viewAddTodoList();
+
+    showTodoList();
+  }
 
   /** Menampilkan view menghapus todo list */
   public static void viewRemoveTodoList() {}

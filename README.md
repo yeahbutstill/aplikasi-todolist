@@ -42,7 +42,12 @@
 - Test Menghapus TodoList
 - Menampilkan View TodoList
 - Test View TodoList
+- Menampilkan View Menambah TodoList
+- Test View menambah TodoList
+- Menampilkan View Hapus TodoList
+- Test View Hapus TodoList
 
 ## Input Data
 
 - Menerima input data dari user
+- Test Input data
