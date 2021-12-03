@@ -1,10 +1,15 @@
+import java.util.Scanner;
+
 public class AplikasiTodoList {
 
   public static String[] model = new String[10];
+  public static Scanner scanner = new Scanner(System.in);
 
   public static void main(String[] args) {
-    testShowTodoList();
-    testAddTodoList();
+    //    testShowTodoList();
+    //    testAddTodoList();
+    //    testRemoveTodoList();
+    testInputData();
   }
 
   /** Menampilkan todo list */
@@ -70,7 +75,58 @@ public class AplikasiTodoList {
   }
 
   /** Menghapus todo list */
-  public static void removeTodoList() {}
+  public static boolean removeTodoList(Integer number) {
+    if (model.length <= (number - 1)) {
+      return false;
+    } else if (model[number - 1] == null) {
+      return false;
+    } else {
+      for (int i = (number - 1); i < model.length; i++) {
+        if (i == (model.length - 1)) {
+          model[i] = null;
+        } else {
+          model[i] = model[i + 1];
+        }
+      }
+      return true;
+    }
+  }
+
+  /** Test menghapus todo list */
+  public static void testRemoveTodoList() {
+    addTodoList("Satu");
+    addTodoList("Duna");
+    addTodoList("Tiga");
+    addTodoList("Empat");
+    addTodoList("Lima");
+
+    var result = removeTodoList(20);
+    System.out.println(result);
+
+    result = removeTodoList(7);
+    System.out.println(result);
+
+    result = removeTodoList(2);
+    System.out.println(result);
+
+    showTodoList();
+  }
+
+  /** Input data dari user */
+  public static String input(String info) {
+    System.out.print(info + " : ");
+    String data = scanner.nextLine();
+    return data;
+  }
+
+  /** test input data */
+  public static void testInputData() {
+    var data = input("Nama");
+    System.out.println("Hi " + data);
+
+    var channel = input("Channel");
+    System.out.println(channel);
+  }
 
   /** Menampilkan view todo list */
   public static void viewShowTodoList() {}

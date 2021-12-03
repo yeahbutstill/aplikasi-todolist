@@ -38,4 +38,9 @@
 - Test Menampilkan TodoList
 - Menambah TodoList
 - Test Menambahkan TodoList
-- 
+- Menghapus TodoList
+- Test Menghapus TodoList
+
+## Input Data
+
+- Menerima input data dari user
